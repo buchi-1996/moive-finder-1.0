@@ -1,0 +1,20 @@
+.search__area{
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.search__heading{
+    text-align: center;
+    font-size: 24px !important;
+}
+
+.card__flex{
+    display: flex;
+}
+
+.loader{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+

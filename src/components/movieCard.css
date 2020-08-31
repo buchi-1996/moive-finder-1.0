@@ -1,0 +1,47 @@
+.movie__card{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.movie__card p{
+    margin: 10px 0;
+}
+
+.movie__card p strong{
+    color: #333;
+    
+}
+
+.movie__heading{
+    margin-bottom: 20px !important;
+    font-size: 21px !important;
+}
+
+.tags{
+    padding: 3px 10px;
+    background: #eeff;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.flex__cup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rating__box{
+    display: flex;
+}
+
+.movie__heading a{
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.movie__heading a:hover{
+    color: #aaa !important;
+}
+
+
