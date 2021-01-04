@@ -9,7 +9,7 @@ const Hero = () => {
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                     <Typography variant="h4" className="hero__title">We've Got Quality Movies</Typography>
-                    <Typography color="textSecondary" variant="p" className="hero__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi adipisci, sapiente debitis at ea soluta doloribus odio ipsa ad et, vel tempore! Minus fugiat reiciendis, eligendi possimus facilis, tempora, molestias doloremque corrupti consequuntur iste porro nisi qui quam animi cumque!</Typography>
+                    <Typography color="textSecondary" className="hero__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi adipisci, sapiente debitis at ea soluta doloribus odio ipsa ad et, vel tempore! Minus fugiat reiciendis, eligendi possimus facilis, tempora, molestias doloremque corrupti consequuntur iste porro nisi qui quam animi cumque!</Typography>
                     <CardActions className="hero__buttons">
                         <Button variant="contained" color="default">Explore</Button>
                         <Button variant="contained" color="primary">Discorver</Button>

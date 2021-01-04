@@ -1,15 +1,17 @@
 import React from 'react';
-import Header from '../src/components/Header';
-import Hero from '../src/components/Hero';
+import Header from './components/Header';
+import Hero from './components/Hero';
 import './App.css';
-import SearchMovie from './components/MovieGallery';
+import MovieGallery from './components/MovieGallery';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Hero />
-      <SearchMovie />
+      <MovieGallery />
+      <Footer />
     </div>
   );
 }

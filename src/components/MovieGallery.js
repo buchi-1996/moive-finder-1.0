@@ -7,11 +7,11 @@ import FormSearch from './FormSearch';
 const MovieGallery = () => {
     const [Movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [term, setTerm] = useState('game of thrones');
+    const [term, setTerm] = useState('batman');
 
     useEffect(() => {
        const getMovie = async () => {
-           const response = await fetch(`http://api.tvmaze.com/search/shows?q=${term}`);
+           const response = await fetch(`https://api.tvmaze.com/search/shows?q=${term}`);
            const resData = await response.json();
            const data = resData.map(res => {
                return {
@@ -36,7 +36,7 @@ const MovieGallery = () => {
 
     return (
         <section className="search__area">
-            <Container>
+            <Container maxWidth="lg">
                 <Typography variant="h4" className="search__heading">Available movies on site</Typography>
                 <FormSearch searchText={text => setTerm(text)} />
 

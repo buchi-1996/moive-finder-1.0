@@ -5,6 +5,7 @@ import './formSearch.css';
 
 const FormSearch = ({ searchText }) => {
     const [text, setText] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
         searchText(text);
