@@ -9,6 +9,7 @@ const FormSearch = ({ searchText }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         searchText(text);
+        setText('');
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -16,7 +17,7 @@ const FormSearch = ({ searchText }) => {
              <IconButton className="icon__search" >
              <SearchIcon />
              </IconButton>
-             <input type="text" onChange={e => setText(e.target.value)} placeholder="search a movie...."/>
+             <input type="text" value={text} onChange={e => setText(e.target.value)} placeholder="search a movie...."/>
          </Card>
         </form>
     )

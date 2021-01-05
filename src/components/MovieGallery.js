@@ -7,25 +7,23 @@ import FormSearch from './FormSearch';
 const MovieGallery = () => {
     const [Movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [term, setTerm] = useState('batman');
+    const [term, setTerm] = useState('pirates');
 
     useEffect(() => {
        const getMovie = async () => {
-           const response = await fetch(`https://api.tvmaze.com/search/shows?q=${term}`);
+        // const response = await fetch(`https://api.tvmaze.com/search/shows?q=${term}`);
+           const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${term}&api_key=3dbab9996a73281daab4840175a76c4f`);
            const resData = await response.json();
-           const data = resData.map(res => {
-               return {
-                   _id: res.show.id,
-                   name: res.show.name,
-                   showImage: res.show.image ? res.show.image.original : '',
-                   genres: res.show.genres,
-                   rating: res.show.rating.average,
-                   language: res.show.language,
-                   summary: res.show.summary,
-                   filmUrl: res.show.url
-               }
-           })
-            console.log(resData);
+           const data = resData.results.map(x => ({
+               _id: x.id,
+               title: x.title,
+               desc: x.overview,
+               image: x.poster_path,
+               rating: x.vote_average,
+               releaseDate: x.release_date,
+               language: x.original_language
+           }))
+            console.log(resData.results);
             setMovies(data);
             setIsLoading(false);
        }
@@ -45,7 +43,7 @@ const MovieGallery = () => {
                 {isLoading ? <h2 className="loader">Loading....</h2> : 
                 <Grid container spacing={3}>
                 {Movies.map(movie => (
-                     <Grid className="card__flex" key={movie._id} item xs={12} sm={6} md={4} lg={4}>
+                     <Grid className="card__flex" key={movie._id} item xs={12} sm={6} md={4} lg={3}>
                      <MovieCard  {...movie}/>
                  </Grid>
                 ))}

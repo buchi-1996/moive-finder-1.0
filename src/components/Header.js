@@ -1,32 +1,27 @@
 import React from 'react';
-import './header.css';
-import HdIcon from '@material-ui/icons/Hd';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import {
     Typography,
     AppBar,
-    Toolbar,
-    IconButton
+    Toolbar
 } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    appBar: {
+        background: '#000',
+    }
+    
+}))
 
 const Header = () => {
-    return (
-            <AppBar position="static" className="header">
-                <Toolbar variant="dense" className="header__nav">
+    const classes = useStyles();
 
-                    <IconButton variant="h6" color="inherit">
-                        <HdIcon />
-                    </IconButton>
-                    <Typography className="brand__name">
+    return (
+            <AppBar position="static" className={classes.appBar}>
+                <Toolbar variant="dense" className="me">
+                    <Typography>
                         <strong>MovieLog <sub>.com</sub></strong>
                     </Typography>
-                <div className="share-icons">
-                    <FacebookIcon className="facebook"/>
-                    <TwitterIcon className="twitter"/>
-                    <LinkedInIcon className="linkedin"/>
-                </div>
                 </Toolbar>
             </AppBar>
     )
