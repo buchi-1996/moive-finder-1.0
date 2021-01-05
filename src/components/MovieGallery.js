@@ -7,7 +7,7 @@ import FormSearch from './FormSearch';
 const MovieGallery = () => {
     const [Movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [term, setTerm] = useState('pirates');
+    const [term, setTerm] = useState('fast');
 
     useEffect(() => {
        const getMovie = async () => {
