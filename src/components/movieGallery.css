@@ -17,4 +17,10 @@
     text-transform: capitalize;
 }
 
+.loader img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
 

@@ -7,7 +7,7 @@ import FormSearch from './FormSearch';
 const MovieGallery = () => {
     const [Movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [term, setTerm] = useState('fast');
+    const [term, setTerm] = useState('spider man');
 
     useEffect(() => {
        const getMovie = async () => {
@@ -40,7 +40,7 @@ const MovieGallery = () => {
 
                 {!isLoading && Movies.length === 0 &&  <h2 className="loader">movie not found</h2>}
 
-                {isLoading ? <h2 className="loader">Loading....</h2> : 
+                {isLoading ? <h3 className="loader"><img src="../../../logo192.png" alt=""/><br></br>Loading...</h3> : 
                 <Grid container spacing={3}>
                 {Movies.map(movie => (
                      <Grid className="card__flex" key={movie._id} item xs={12} sm={6} md={4} lg={3}>

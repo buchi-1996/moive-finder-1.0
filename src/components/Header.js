@@ -9,6 +9,11 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     appBar: {
         background: '#000',
+    },
+
+    typography: {
+        flexGrow: 1,
+        textAlign: 'center',
     }
     
 }))
@@ -18,9 +23,9 @@ const Header = () => {
 
     return (
             <AppBar position="static" className={classes.appBar}>
-                <Toolbar variant="dense" className="me">
-                    <Typography>
-                        <strong>MovieLog <sub>.com</sub></strong>
+                <Toolbar variant="dense">
+                    <Typography variant="h5" className={classes.typography}>
+                        <strong>MovieLog<sub>.com</sub></strong>
                     </Typography>
                 </Toolbar>
             </AppBar>

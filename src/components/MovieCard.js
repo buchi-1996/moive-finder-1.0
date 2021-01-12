@@ -13,7 +13,7 @@ const MovieCard = ({_id, title, desc, image, rating, releaseDate, language}) => 
     return (
         <Card className="movie__card">
             <CardMedia
-                style={{ height: "200px" }}
+                style={{ height: "200px", objectFit: "contain", width: "60%", margin: "auto", borderBottomLeftRadius: 100, borderBottomRightRadius: 100,}}
                 image={`https://image.tmdb.org/t/p/w185/${image}`}
                 title={title} />
             <CardContent>
